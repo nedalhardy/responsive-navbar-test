@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap');
 
+html, body {
+    overflow-x: hidden;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -200,13 +204,17 @@ nav ul.dropdown-list {
 }
 
 .mobile ul.dropdown-list {
-    position: relative;
-    background: transparent;
-    text-align: center;
-    height: 0;
-    overflow-y: hidden;
+    position: absolute;
+    top: 0;
+    left: 120px;
+    width: 500px;
+    height: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    background: var(--smoke);
+    text-align: left;
+    padding: 6px 16px;
     transition: opacity 1s ease-in-out;
-    padding-top: 0;
 }
 
 .mobile .nav-wrapper ul li:hover .dropdown-list {
@@ -220,6 +228,5 @@ nav ul.dropdown-list {
 }
 
 .mobile .nav-wrapper ul.dropdown-list li a {
-    color: var(--dark-gray);
+    color: var(--dark);
 }
-
