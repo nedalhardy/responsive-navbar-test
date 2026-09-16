@@ -204,22 +204,25 @@ nav ul.dropdown-list {
 }
 
 .mobile ul.dropdown-list {
-    position: absolute;
-    top: 0;
-    left: 120px;
-    width: 500px;
-    height: auto;
+    position: static;
+    transform: none;
+    width: max-content;
+    max-width: calc(100vw - 32px);
+    height: 0;
     overflow: hidden;
-    white-space: nowrap;
+    white-space: normal;
+    overflow-wrap: anywhere;
     background: var(--smoke);
     text-align: left;
-    padding: 6px 16px;
+    padding: 0 16px;
     transition: opacity 1s ease-in-out;
 }
 
 .mobile .nav-wrapper ul li:hover .dropdown-list {
     height: max-content;
-    padding-top: 6px;
+    margin-top: 10px;
+    padding: 6px 16px;
+    animation: none;
 }
 
 .mobile ul.nav-list li {
