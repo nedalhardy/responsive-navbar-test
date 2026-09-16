@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap');
 
-html, body {
-    overflow-x: hidden;
-}
-
 * {
     padding: 0;
     margin: 0;
@@ -44,6 +40,7 @@ body {
 
 .brand svg {
     height: 30px;
+    width: 90px;
     margin-right: 10px;
 }
 
@@ -163,7 +160,7 @@ nav ul.dropdown-list {
 }
 
 .mobile .hamburger span {
-    background: var(--pure);
+    background: var(--dark);
     width: 28px;
     height: 2px;
     margin-bottom: 8px;
@@ -204,25 +201,18 @@ nav ul.dropdown-list {
 }
 
 .mobile ul.dropdown-list {
-    position: static;
-    transform: none;
-    width: max-content;
-    max-width: calc(100vw - 32px);
+    position: relative;
+    background: transparent;
+    text-align: center;
     height: 0;
-    overflow: hidden;
-    white-space: normal;
-    overflow-wrap: anywhere;
-    background: var(--smoke);
-    text-align: left;
-    padding: 0 16px;
+    overflow-y: hidden;
     transition: opacity 1s ease-in-out;
+    padding-top: 0;
 }
 
 .mobile .nav-wrapper ul li:hover .dropdown-list {
     height: max-content;
-    margin-top: 10px;
-    padding: 6px 16px;
-    animation: none;
+    padding-top: 6px;
 }
 
 .mobile ul.nav-list li {
@@ -231,5 +221,5 @@ nav ul.dropdown-list {
 }
 
 .mobile .nav-wrapper ul.dropdown-list li a {
-    color: var(--dark);
+    color: var(--dark-gray);
 }
