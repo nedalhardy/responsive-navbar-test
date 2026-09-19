@@ -40,7 +40,6 @@ body {
 
 .brand svg {
     height: 30px;
-    width: 90px;
     margin-right: 10px;
 }
 
@@ -160,7 +159,7 @@ nav ul.dropdown-list {
 }
 
 .mobile .hamburger span {
-    background: var(--dark);
+    background: var(--pure);
     width: 28px;
     height: 2px;
     margin-bottom: 8px;
@@ -180,10 +179,16 @@ nav ul.dropdown-list {
     opacity: 0;
     pointer-events: none;
     transition: all .3s ease-in-out;
+    z-index: 1;
 }
 
 .hamburger, .brand {
     z-index: 9999;
+}
+
+main {
+    position: relative;
+    z-index: 100;
 }
 
 .mobile ul.nav-list.open {
@@ -192,7 +197,7 @@ nav ul.dropdown-list {
 }
 
 .mobile .hamburger span {
-    transform-origin: left;
+    transform-origin: right;
     transition: all .3s ease-in-out;
 }
 
@@ -208,6 +213,7 @@ nav ul.dropdown-list {
     overflow-y: hidden;
     transition: opacity 1s ease-in-out;
     padding-top: 0;
+    transform: translateY(-100%);
 }
 
 .mobile .nav-wrapper ul li:hover .dropdown-list {
